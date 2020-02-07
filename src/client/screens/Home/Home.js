@@ -7,7 +7,7 @@ export default class Home extends Component {
   }
 
   routeScheduleSetup = () => {
-    this.props.history.push('/schedule-setup');
+    this.props.history.push('/schedule-setup1');
   }
 
   render() {
