@@ -7,10 +7,9 @@ export default class ScheduleSetup2 extends Component {
 
   render() {
     return (
-      <div>
+      <div className="setup2">
         <h1>ScheduleSetup2</h1>
-        <form>
-          What's your Chronotype?<br/>
+        <form>What's your Chronotype?<br/>
           <input type="radio" name="gender" /> Dolphin<br/>
           <input type="radio" name="gender" /> Lion<br/>
           <input type="radio" name="gender" /> Bear<br/>

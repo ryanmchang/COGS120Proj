@@ -12,12 +12,10 @@ export default class ScheduleSetup1 extends Component {
 
   render() {
     return (
-      <div>
+      <div className="setup1">
         <h1>ScheduleSetup1</h1>
-        <form>
-          What country are you going to? <br/>
-          <input type="text"/> <br/>
-          What's your flight number? <br/>
+        <form>What country are you going to? <br/>
+          <input type="text"/> <br/> What's your flight number? <br/>
           <input type="text"/> <br/>
         </form>
 
