@@ -12,8 +12,9 @@ export default class Home extends Component {
 
   render() {
     return (
-      <div>
+      <div className="home">
         <h1>Home</h1>
+        <h1>Welcome back, Ryan</h1>
         <button onClick={this.routeScheduleSetup}>Continue</button>
       </div>
     );
