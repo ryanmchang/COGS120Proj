@@ -14,7 +14,7 @@ export default class Home extends Component {
     return (
       <div>
         <h1>Home</h1>
-        <button onClick={this.routeScheduleSetup}>Hello</button>
+        <button onClick={this.routeScheduleSetup}>Continue</button>
       </div>
     );
   }
