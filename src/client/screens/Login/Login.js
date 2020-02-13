@@ -12,11 +12,14 @@ export default class Login extends Component {
 
   render() {
     return (
-      <div className="home">
+      <div className="login">
         <h1>Login</h1>
-        <p>Time of the day placeholder</p>
-        <h1>Welcome back, <br/>Bacon</h1>
-        <button onClick={this.routeHome}>Continue</button>
+        <p>Welcome to BodyClock</p>
+        <h4>Username<input class="textbox" type="text"/></h4>
+        <h4>Password<input class="textbox" type="text"/></h4>
+        <a href="account-recovery" id="forgot">Trouble logging in?</a> <br/>
+        <p>or</p>
+        <button onClick={this.routeHome}>Login</button>
       </div>
     );
   }
