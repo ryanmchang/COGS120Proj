@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './screens/Home/Home.js';
 import ScheduleSetup1 from './screens/ScheduleSetup1/ScheduleSetup1.js';
 import ScheduleSetup2 from './screens/ScheduleSetup2/ScheduleSetup2.js';
+import Login from './screens/Login/Login.js';
 
 const NewRoute = () => {
   return (
@@ -21,7 +22,8 @@ class App extends Component {
     return (
       <BrowserRouter>
         <Switch>
-          <Route exact path='/' component={Home} />
+          <Route exact path='/' component={Login} />
+          <Route exact path='/home' component={Home} />
           <Route exact path='/schedule-setup1' component={ScheduleSetup1} />
           <Route exact path='/schedule-setup2' component={ScheduleSetup2} />
         </Switch>
