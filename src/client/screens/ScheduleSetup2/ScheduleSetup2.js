@@ -9,6 +9,9 @@ export default class ScheduleSetup2 extends Component {
   routeBack = () => {
     this.props.history.goBack();
   }
+  routeSchedule = () => {
+    this.props.history.push('/schedule');
+  }
 
   render() {
     return (
@@ -29,8 +32,7 @@ export default class ScheduleSetup2 extends Component {
           <input type="text"/> <br/>
         </form>
 
-
-        <button>Finish</button>
+        <button onClick={this.routeSchedule}>Continue</button>
       </div>
     );
   }
