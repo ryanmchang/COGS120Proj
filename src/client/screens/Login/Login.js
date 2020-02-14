@@ -18,7 +18,7 @@ export default class Login extends Component {
     return (
       <div className="login">
         <h1>Body Clock</h1>
-        <img class="earth" src="/public/Earth.svg" />
+        <img className="earth" src="/public/Earth.svg" />
         <div className="loginContent">
         <h4>Username<input class="textbox" type="text"/></h4>
         <h4>Password<input class="textbox" type="text"/></h4>

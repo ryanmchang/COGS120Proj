@@ -31,7 +31,7 @@ export default class ScheduleSetup2 extends Component {
           What time do you usually wake up? <br/>
           <input type="text"/> <br/>
         </form>
-      <img class="agreement" src="/public/agreement.svg" />
+      <img className="agreement" src="/public/agreement.svg" />
 
         <button className="nextStep" onClick={this.routeSchedule}>Finish</button>
 
