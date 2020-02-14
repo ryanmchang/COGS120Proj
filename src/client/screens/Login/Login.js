@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import FacebookLogin from 'react-facebook-login';
-//import { Route, Link} from 'react-router-dom';
+import Earth from "../../../../public/Earth.svg";
 
 export default class Login extends Component {
   responseFacebook(response) {
@@ -18,7 +18,7 @@ export default class Login extends Component {
     return (
       <div className="login">
         <h1>Body Clock</h1>
-        <img className="earth" src="../../../public/Earth.svg" />
+        <img className="earth" src={Earth} />
         <div className="loginContent">
         <h4>Username<input class="textbox" type="text"/></h4>
         <h4>Password<input class="textbox" type="text"/></h4>
