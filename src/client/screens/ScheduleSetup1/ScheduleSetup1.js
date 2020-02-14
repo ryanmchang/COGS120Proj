@@ -25,7 +25,7 @@ export default class ScheduleSetup1 extends Component {
           <input type="text"/> <br/> What's your flight number? <br/>
           <input type="text"/> <br/>
         </form>
-        <img class="agreement" src="/public/agreement.svg" />
+        <img class="agreement" src="../../../public/agreement.svg" />
 
         <button className="nextStep" onClick={this.routeScheduleSetup}>Continue</button>
       </div>
