@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import BackButton from "../../components/BackButton/BackButton.js";
+import Agreement from  "../../../../public/agreement.svg";
 
 export default class ScheduleSetup2 extends Component {
 
@@ -31,7 +32,7 @@ export default class ScheduleSetup2 extends Component {
           What time do you usually wake up? <br/>
           <input type="text"/> <br/>
         </form>
-      <img className="agreement" src="../../../public/agreement.svg" />
+      <img className="agreement" src={Agreement} />
 
         <button className="nextStep" onClick={this.routeSchedule}>Finish</button>
 

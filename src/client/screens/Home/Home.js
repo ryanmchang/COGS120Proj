@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import { Route, Link} from 'react-router-dom';
 import data from "../../data.json";
 import BackButton from "../../components/BackButton/BackButton.js";
+import Flight from  "../../../../public/Flight.svg";
 
 
 export default class Home extends Component {
@@ -25,7 +26,7 @@ export default class Home extends Component {
         <p>Feb 21, 2020</p>
         <h1>Welcome back, <br/> {data.user.name}</h1>
         </div>
-        <img class="flight" onClick={this.routeScheduleSetup} src="../../../public/Flight.svg" />
+        <img class="flight" onClick={this.routeScheduleSetup} src={Flight} />
         <button className="addTrip" onClick={this.routeScheduleSetup}>Add a Trip</button>
       </div>
     );
