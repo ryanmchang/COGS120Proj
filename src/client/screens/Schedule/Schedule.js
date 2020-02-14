@@ -96,9 +96,9 @@ export default class Schedule extends Component {
     return (
       <div className="schedule">
         <BackButton handleClick={this.routeBack}/>
-        <h1>Schedule</h1>
+        <h1>Your Schdule has been generated</h1>
         {displayPosts}
-        <button>Finish</button>
+
       </div>
     );
   }

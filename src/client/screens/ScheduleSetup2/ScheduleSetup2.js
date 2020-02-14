@@ -19,7 +19,7 @@ export default class ScheduleSetup2 extends Component {
         <button className="back-button" onClick={this.routeBack}>Back</button>
 
         <form>What's your Chronotype?<br/>
-          <input type="radio" name="gender" /> Dolphin<br/>
+          <input  type="radio" name="gender" /> Dolphin<br/>
           <input type="radio" name="gender" /> Lion<br/>
           <input type="radio" name="gender" /> Bear<br/>
           <input type="radio" name="gender" /> Wolf<br/>
@@ -33,7 +33,7 @@ export default class ScheduleSetup2 extends Component {
         </form>
       <img class="agreement" src="/public/agreement.svg" />
 
-        <button onClick={this.routeSchedule}>Continue</button>
+        <button className="nextStep" onClick={this.routeSchedule}>Finish</button>
 
       </div>
     );
