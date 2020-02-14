@@ -1,14 +1,18 @@
 // $primary-color: black;
 
+
 h1 {
   color: white;
 }
 
 body {
-  text-align: center;
+  background-image: url('../../public/background.svg');
+  text-align: left;
   margin: auto;
-  background-color:white;
-  font-family: "Open Sanse", Times, serif;
+  // background-color:white;
+  font-family: Barlow, Times, serif;
+  color: #F2F2F2;
 }
+
 
 

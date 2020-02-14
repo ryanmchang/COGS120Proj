@@ -17,20 +17,22 @@ export default class Login extends Component {
   render() {
     return (
       <div className="login">
-        <h1>Login</h1>
-        <p>Welcome to BodyClock</p>
+        <h1>Body Clock</h1>
+        <img class="earth" src="/public/Earth.svg" />
+        <div className="loginContent">
         <h4>Username<input class="textbox" type="text"/></h4>
         <h4>Password<input class="textbox" type="text"/></h4>
         <a href="account-recovery" id="forgot">Trouble logging in?</a><br/>
-        <button onClick={this.routeHome}>Login</button>
+        <button onClick={this.routeHome}>LOGIN</button>
         <p>or</p>
         <FacebookLogin
-          class="facebookLogin"
+          className="facebookLogin"
           appId="219745835855775"
           autoLoad={true}
           fields="name,email,picture"
           callback={this.responseFacebook}
         /><br/>
+        </div>
       </div>
     );
   }
