@@ -19,14 +19,15 @@ export default class ScheduleSetup1 extends Component {
   render() {
     return (
       <div className="setup1">
-        <button className="back-button" onClick={this.routeBack}> BACK </button>
-        <h1>ScheduleSetup1</h1>
-        <form>What country are you going to? <br/>
+        <button className="back-button" onClick={this.routeBack}>Back</button>
+        <h1>Tell us about yourself</h1>
+        <form>So, <br/> when are you travelling? <br/>
           <input type="text"/> <br/> What's your flight number? <br/>
           <input type="text"/> <br/>
         </form>
+        <img class="agreement" src="/public/agreement.svg" />
 
-        <button onClick={this.routeScheduleSetup}>Continue</button>
+        <button className="nextStep" onClick={this.routeScheduleSetup}>Continue</button>
       </div>
     );
   }

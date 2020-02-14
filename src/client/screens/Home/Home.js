@@ -21,10 +21,12 @@ export default class Home extends Component {
     return (
       <div className="home">
         <BackButton handleClick={this.routeBack}/>
-        <h1>Home</h1>
-        <p>Time of the day placeholder</p>
+        <div className= "welcome">
+        <p>Feb 21, 2020</p>
         <h1>Welcome back, <br/> {data.user.name}</h1>
-        <button onClick={this.routeScheduleSetup}>Continue</button>
+        </div>
+        <img class="flight" onClick={this.routeScheduleSetup} src="/public/Flight.svg" />
+        <button className="addTrip" onClick={this.routeScheduleSetup}>Add a Trip</button>
       </div>
     );
   }

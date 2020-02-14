@@ -13,8 +13,8 @@ export default class ScheduleSetup2 extends Component {
   render() {
     return (
       <div className="setup2">
-        <button className="back-button" onClick={this.routeBack}> BACK </button>
-        <h1>ScheduleSetup2</h1>
+        <button className="back-button" onClick={this.routeBack}>Back</button>
+
         <form>What's your Chronotype?<br/>
           <input type="radio" name="gender" /> Dolphin<br/>
           <input type="radio" name="gender" /> Lion<br/>
@@ -28,9 +28,9 @@ export default class ScheduleSetup2 extends Component {
           What time do you usually wake up? <br/>
           <input type="text"/> <br/>
         </form>
+      <img class="agreement" src="/public/agreement.svg" />
 
-
-        <button>Finish</button>
+        <button className="nextStep">Finish</button>
       </div>
     );
   }

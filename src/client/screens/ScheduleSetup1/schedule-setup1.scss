@@ -1,28 +1,51 @@
 .setup1{
+
+  margin:10%;
+margin-top:20%;
+
   h1 {
-    color: black;
+    margin-top:50px;
+    font-family: Barlow;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 38px;
+
+    color: #F2F2F2;
   }
   button {
-  margin-top:100px;
-  background-color: white;
-  color: black;
-  padding: 15px 32px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
+   margin-top: 10px;
+    background-color: #F2C94C;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
 
   }
 
   input[type=text] {
+      width: 100%;
+    padding: 12px 20px;
+    margin: 11px 0 20px;
+    box-sizing: border-box;
+    border:1px solid grey;
+}
+ form{
+  font-size:20px;
+ }
+ img{
+  margin-bottom:60px;
+  margin-left:10px;
+ }
+
+}
+
+.nextStep {
+  display: block;
+  margin-left: 25%;
+  margin-right: auto;
   width: 50%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border:1px solid grey;
 }
-
-
-}
-
-
 
