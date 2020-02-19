@@ -8,7 +8,7 @@
 
 
 {
-  "schedule": [
+  "schedule1": [
     {
       "activity": "Avoid Light",
       "Time": "8:00 - 13:00",
@@ -31,8 +31,13 @@
     },
      {
       "activity": "Get melatonin",
-      "Time": "22:30",
+      "Time": "23:30",
       "description": "Have 1-3mg melatonin for a good quality sleep."
+    },
+    {
+      "activity": "Get to sleep",
+      "Time": "2:00",
+      "description": "A warm bath or meditation is always helpful."
     }
 
   ]
