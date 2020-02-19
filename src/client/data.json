@@ -1,7 +1,39 @@
+// {
+//   "user": {
+//     "name": "Ryan",
+//     "age": 22,
+//     "chronotype": "Lion"
+//   }
+// }
+
+
 {
-  "user": {
-    "name": "Ryan",
-    "age": 22,
-    "chronotype": "Lion"
-  }
+  "schedule": [
+    {
+      "activity": "Avoid Light",
+      "Time": "8:00 - 13:00",
+      "description": "Minimize light exposure as much as possible."
+    },
+     {
+      "activity": "Use caffeine",
+      "Time": "8:00 - 16:00",
+      "description": "Use caffaine little and often."
+    },
+    {
+      "activity": "Work out time",
+      "Time": "16:00-18:00",
+      "description": "Easiest time to fall asleep. Do some work out to stay awake"
+    },
+    {
+      "activity": "See some light",
+      "Time": "20:00 - 24:00",
+      "description": "Get whatever light exposure you can-avoid darkness."
+    },
+     {
+      "activity": "Get melatonin",
+      "Time": "22:30",
+      "description": "Have 1-3mg melatonin for a good quality sleep."
+    }
+
+  ]
 }

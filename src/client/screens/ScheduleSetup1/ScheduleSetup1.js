@@ -22,7 +22,7 @@ export default class ScheduleSetup1 extends Component {
       <div className="setup1">
         <button className="back-button" onClick={this.routeBack}>Back</button>
         <h1>Tell us about yourself</h1>
-        <form>So, <br/> when are you travelling? <br/>
+        <form>So, <br/> Your Departure Date <br/>
           <input type="text"/> <br/> What's your flight number? <br/>
           <input type="text"/> <br/>
         </form>

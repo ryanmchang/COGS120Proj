@@ -27,9 +27,9 @@ export default class ScheduleSetup2 extends Component {
         </form>
 
         <form>
-          What time do you usually sleep? <br/>
+          What time do you usually fall asleep? <br/>
           <input type="text"/> <br/>
-          What time do you usually wake up? <br/>
+          What time do you normally wake up? <br/>
           <input type="text"/> <br/>
         </form>
       <img className="agreement" src={Agreement} />
