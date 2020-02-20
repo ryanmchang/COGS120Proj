@@ -80,12 +80,11 @@ export default class Schedule extends Component {
         </TabList>
 
         <TabPanel>
-          <h2>Any content 1</h2>
           {
             data.schedule1.map( (schedule) =>
               <div>
                 <h1>{schedule.activity}</h1>
-                <p>{schedule.Time}</p>
+                <p className="time">{schedule.Time}</p>
                 <p>{schedule.description}</p>
               </div>
             )
@@ -95,7 +94,6 @@ export default class Schedule extends Component {
           </table>*/}
         </TabPanel>
         <TabPanel>
-          <h2>Any content 2</h2>
           {/*<table>
             {this.createNightTable()}
           </table>*/}
@@ -105,7 +103,7 @@ export default class Schedule extends Component {
     return (
       <div className="schedule">
         <BackButton handleClick={this.routeBack}/>
-        <h1>Your Schdule has been generated</h1>
+        <h3>These tips help you fight against JetLag</h3>
         {displayPosts}
 
       </div>

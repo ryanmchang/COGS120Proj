@@ -2,12 +2,12 @@
 .schedule {
     margin:10%;
     margin-top:20%;
-  h1 {
-    margin-top:50px;
+  h3 {
+    // margin-top:50px;
     font-family: Barlow;
     font-style: normal;
     font-weight: 300;
-    font-size: 22px;
+    // font-size: 22px;
     line-height: 38px;
 
     color: #F2F2F2;
@@ -25,4 +25,9 @@
   }
 
 
+}
+
+.time {
+  color:#F9C926;
+  text-decoration: underline;
 }
