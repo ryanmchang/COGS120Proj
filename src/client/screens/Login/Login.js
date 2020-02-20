@@ -10,7 +10,11 @@ export default class Login extends Component {
   componentDidMount() {
   }
 
-  routeHome = () => {
+  routeSignup = () => {
+    this.props.history.push('/Signup');
+  }
+
+   routeHome = () => {
     this.props.history.push('/home');
   }
 
@@ -21,8 +25,8 @@ export default class Login extends Component {
         <img className="earth" src={Earth} />
         <div className="loginContent">
         <h4>Username<input class="textbox" type="text"/></h4>
-        <h4>Password<input class="textbox" type="text"/></h4>
-        <a href="account-recovery" id="forgot">Trouble logging in?</a><br/>
+        <h4>Password<input class="textbox" type="password"/></h4>
+        <a onClick={this.routeSignup} id="forgot">Click here to sign up</a><br/>
         <button onClick={this.routeHome}>LOGIN</button>
         <p>or</p>
         <FacebookLogin
