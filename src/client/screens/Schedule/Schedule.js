@@ -5,10 +5,6 @@ import BackButton from "../../components/BackButton/BackButton.js";
 import { render } from "react-dom";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-{
-// import Tab from "../../components/Tab/Tab.js";
-// require('./styles.css');
-}
 
 
 export default class Schedule extends Component {
@@ -81,7 +77,7 @@ export default class Schedule extends Component {
 
         <TabPanel>
           {
-            data.schedule1.map( (schedule) =>
+            data.day_schedule.map( (schedule) =>
               <div>
                 <h1>{schedule.activity}</h1>
                 <p className="time">{schedule.Time}</p>
@@ -94,6 +90,15 @@ export default class Schedule extends Component {
           </table>*/}
         </TabPanel>
         <TabPanel>
+          {
+            data.night_schedule.map( (schedule) =>
+              <div>
+                <h1>{schedule.activity}</h1>
+                <p className="time">{schedule.Time}</p>
+                <p>{schedule.description}</p>
+              </div>
+            )
+          }
           {/*<table>
             {this.createNightTable()}
           </table>*/}

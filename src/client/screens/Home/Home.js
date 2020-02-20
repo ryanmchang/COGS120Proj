@@ -24,9 +24,9 @@ export default class Home extends Component {
         <BackButton handleClick={this.routeBack}/>
         <div className= "welcome">
           <p>Feb 21, 2020</p>
-          <h1>Welcome back, <br/> {data.user.name}</h1>
+          <h1>Welcome back, <br/> {data.user[0].name}</h1>
         </div>
-        <img class="flight" onClick={this.routeScheduleSetup} src={Flight} />
+        <img className="flight" onClick={this.routeScheduleSetup} src={Flight} />
         <button className="addTrip" onClick={this.routeScheduleSetup}>Add a Trip</button>
       </div>
     );

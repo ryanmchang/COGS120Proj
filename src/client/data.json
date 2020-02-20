@@ -6,8 +6,9 @@
       "age": 22,
       "chronotype": "Lion"
     }
-  ],
-  "schedule1": [
+  ]
+  ,
+  "day_schedule": [
     {
       "activity": "Avoid Light",
       "Time": "8:00 - 13:00",
@@ -17,7 +18,9 @@
       "activity": "Use caffeine",
       "Time": "8:00 - 16:00",
       "description": "Use caffaine little and often."
-    },
+    }
+  ],
+  "night_schedule": [
     {
       "activity": "Work out time",
       "Time": "16:00-18:00",
