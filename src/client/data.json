@@ -1,13 +1,12 @@
-// {
-//   "user": {
-//     "name": "Ryan",
-//     "age": 22,
-//     "chronotype": "Lion"
-//   }
-// }
-
 
 {
+  "user": [
+    {
+      "name": "Ryan",
+      "age": 22,
+      "chronotype": "Lion"
+    }
+  ],
   "schedule1": [
     {
       "activity": "Avoid Light",

@@ -81,15 +81,24 @@ export default class Schedule extends Component {
 
         <TabPanel>
           <h2>Any content 1</h2>
-          <table>
+          {
+            data.schedule1.map( (schedule) =>
+              <div>
+                <h1>{schedule.activity}</h1>
+                <p>{schedule.Time}</p>
+                <p>{schedule.description}</p>
+              </div>
+            )
+          }
+          {/*<table>
             {this.createMorningTable()}
-          </table>
+          </table>*/}
         </TabPanel>
         <TabPanel>
           <h2>Any content 2</h2>
-          <table>
+          {/*<table>
             {this.createNightTable()}
-          </table>
+          </table>*/}
         </TabPanel>
       </Tabs>
     );
