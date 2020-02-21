@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import FacebookLogin from 'react-facebook-login';
 import Earth from "../../../../public/Earth.svg";
 
+import data from "../../data.json";
+
 export default class Login extends Component {
   responseFacebook(response) {
     console.log(response);
@@ -12,6 +14,9 @@ export default class Login extends Component {
 
   routeSignup = () => {
     this.props.history.push('/Signup');
+
+    let obj = {name: "Example", age: 0, chronotype: "lion" };
+    data.user.push(obj);
   }
 
    routeHome = () => {

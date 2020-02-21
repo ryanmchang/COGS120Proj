@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import BackButton from "../../components/BackButton/BackButton.js";
 import Agreement from  "../../../../public/agreement.svg";
 import Info from  "../../../../public/info.svg";
-import TimePicker from 'react-dropdown-timepicker';
+
 
 export default class ScheduleSetup2 extends Component {
   constructor() {
@@ -73,7 +73,8 @@ export default class ScheduleSetup2 extends Component {
         <form>
           What time do you usually fall asleep? <br/><br/>
           <div>
-            <TimePicker defaultValue="8:30PM"/><br/><br/>
+            <input type="time" required />
+            <br/><br/>
           </div>
           What time do you normally wake up? <br/>
           <input type="text"/> <br/>
