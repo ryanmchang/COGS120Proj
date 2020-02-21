@@ -9,6 +9,22 @@ export default class Signup extends Component {
    componentDidMount() {
   }
 
+  state = {
+    username: '',
+    password: ''
+  };
+
+  handleUsernameChange = e => {
+    this.setState({
+      userName: e.target.value
+    });
+  };
+
+  handlePassChange = e => {
+    this.setState({
+      password: e.target.value
+    });
+  };
 
   routeHome = () => {
     this.props.history.push('/home');
@@ -27,15 +43,18 @@ export default class Signup extends Component {
         <form>
           <div className="container">
           <label for="username"><b>Set Username</b></label>
-           <input type="text" placeholder="Enter Username" name="username" required />
+           <input type="text" name="username" required
+           onChange={this.handleUsernameChange} placeholder="Username" />
 
             <label for="username"><b>Set Password</b></label>
-           <input type="password" placeholder="Enter Password" name="psw" required />
+           <input type="password" name="psw" required
+           onChange={this.handlePassChange} placeholder="Password" />
 
 
           </div>
         </form>
-      <button className="nextStep" onClick={this.routeHome}>Create Account</button>
+      <button className="nextStep" disabled={(!this.state.userName) || (!this.state.password)}
+      onClick={this.routeHome}>Create Account</button>
     </div>
     );
   };

@@ -49,7 +49,7 @@ export default class Login extends Component {
         <h4>Username<input className="textbox" type="text"
         onChange={this.handleUsernameChange} placeholder="Username"/></h4>
         <h4>Password<input className="textbox" type="password"
-        onChange={this.handlePassChange} placeholder="password"/></h4>
+        onChange={this.handlePassChange} placeholder="Password"/></h4>
         <a onClick={this.routeSignup} >First time user?</a><br/>
         <button disabled={(!this.state.userName) || (!this.state.password)}
         onClick={this.routeHome}>LOGIN</button>
