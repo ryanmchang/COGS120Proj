@@ -5,17 +5,26 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 export default class ScheduleSetup1 extends Component {
-
+  constructor(props) {
+    super(props);
+  }
   componentDidMount() {
   }
 
   state = {
-    startDate: new Date()
+    startDate: new Date(),
+    flightNum: ''
   };
 
   handleChange = date => {
     this.setState({
       startDate: date
+    });
+  };
+
+  handleFlightChange = e => {
+    this.setState({
+      flightNum: e.target.value
     });
   };
 
@@ -39,11 +48,15 @@ export default class ScheduleSetup1 extends Component {
             onChange={this.handleChange}
           />
           <br/> What's your flight number? <br/>
-          <input type="text"/> <br/>
+          <input name="flightNum" default="Enter your flight number"
+          value={this.state.flightNum} type="text" onChange={this.handleFlightChange}
+          placeholder="Enter Flight Number Here"/>
+
         </form>
         <img className="agreement" src={Agreement} />
 
-        <button className="nextStep" onClick={this.routeScheduleSetup}>Continue</button>
+        <button className="nextStep" disabled={!this.state.flightNum}
+        onClick={this.routeScheduleSetup}>Continue</button>
       </div>
     );
   }

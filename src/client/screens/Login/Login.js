@@ -10,6 +10,23 @@ export default class Login extends Component {
   componentDidMount() {
   }
 
+  state = {
+    username: '',
+    password: ''
+  };
+
+  handleUsernameChange = e => {
+    this.setState({
+      userName: e.target.value
+    });
+  };
+
+  handlePassChange = e => {
+    this.setState({
+      password: e.target.value
+    });
+  };
+
   routeSignup = () => {
     this.props.history.push('/Signup');
   }
@@ -24,10 +41,13 @@ export default class Login extends Component {
         <h1>Body Clock</h1>
         <img className="earth" src={Earth} />
         <div className="loginContent">
-        <h4>Username<input className="textbox" type="text"/></h4>
-        <h4>Password<input className="textbox" type="password"/></h4>
+        <h4>Username<input className="textbox" type="text"
+        onChange={this.handleUsernameChange} placeholder="Username"/></h4>
+        <h4>Password<input className="textbox" type="password"
+        onChange={this.handlePassChange} placeholder="password"/></h4>
         <a onClick={this.routeSignup} >First time user?</a><br/>
-        <button onClick={this.routeHome}>LOGIN</button>
+        <button disabled={(!this.state.userName) || (!this.state.password)}
+        onClick={this.routeHome}>LOGIN</button>
         <p>or</p>
         <FacebookLogin
           className="facebookLogin"
