@@ -108,7 +108,7 @@ export default class Schedule extends Component {
     return (
       <div className="schedule">
         <BackButton handleClick={this.routeBack}/>
-        <h3>These tips help you fight against JetLag</h3>
+        <h3>These tips help you fight Jet Lag</h3>
         {displayPosts}
 
       </div>

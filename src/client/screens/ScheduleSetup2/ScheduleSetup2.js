@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import BackButton from "../../components/BackButton/BackButton.js";
 import Agreement from  "../../../../public/agreement.svg";
 import Info from  "../../../../public/info.svg";
+import TimePicker from 'react-dropdown-timepicker';
 
 export default class ScheduleSetup2 extends Component {
   constructor() {
@@ -16,10 +17,16 @@ export default class ScheduleSetup2 extends Component {
 
   showInfo(event) {
     event.preventDefault();
-
-    this.setState({
-      showInfo: true,
-    });
+    if (this.state.showInfo) {
+      this.setState({
+        showInfo: false,
+      });
+    }
+    else {
+      this.setState({
+        showInfo: true,
+      });
+    }
   }
 
   componentDidMount() {
@@ -31,6 +38,8 @@ export default class ScheduleSetup2 extends Component {
   routeSchedule = () => {
     this.props.history.push('/schedule');
   }
+
+
 
   render() {
     return (
@@ -47,7 +56,7 @@ export default class ScheduleSetup2 extends Component {
                 <p className="dropdown">A person's chronotype is the propensity for the individual
                 to sleep at a particular time during a 24-hour period. <br/><br/>
                 Don't know what your chronotype is?</p>
-                <a href="https://thepowerofwhenquiz.com/" id="info" >Check out your chronotype</a>
+                <a href="https://thepowerofwhenquiz.com/" id="info" >Check out your chronotype here</a>
                 <br/><br/>
               </div>
             )
@@ -62,8 +71,10 @@ export default class ScheduleSetup2 extends Component {
         </form>
 
         <form>
-          What time do you usually fall asleep? <br/>
-          <input type="text"/> <br/>
+          What time do you usually fall asleep? <br/><br/>
+          <div>
+            <TimePicker defaultValue="8:30PM"/><br/><br/>
+          </div>
           What time do you normally wake up? <br/>
           <input type="text"/> <br/>
         </form>
