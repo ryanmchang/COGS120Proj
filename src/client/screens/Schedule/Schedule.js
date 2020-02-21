@@ -15,57 +15,6 @@ export default class Schedule extends Component {
   routeBack = () => {
     this.props.history.goBack();
   }
-  createMorningTable = () => {
-    let table = []
-
-    // Outer loop to create parent
-    for (let i = 0; i < 12; i++) {
-      let children = []
-      //Inner loop to create children
-      for (let j = 0; j < 2; j++) {
-        if (j < 1) {
-          if (i === 0) {
-            children.push(<td>{`12:00 A.M.`}</td>)
-          }
-          else {
-            children.push(<td>{`${i}:00 A.M.`}</td>)
-          }
-        }
-        else {
-          children.push(<td>{`To-Do ${i+1}`}</td>)
-        }
-      }
-      //Create the parent and add the children
-      table.push(<tr>{children}</tr>)
-    }
-    return table
-  }
-
-  createNightTable = () => {
-    let table = []
-
-    // Outer loop to create parent
-    for (let i = 0; i < 11; i++) {
-      let children = []
-      //Inner loop to create children
-      for (let j = 0; j < 2; j++) {
-        if (j < 1) {
-          if (i === 0) {
-            children.push(<td>{`12:00 P.M.`}</td>)
-          }
-          else {
-            children.push(<td>{`${i + 1}:00 P.M.`}</td>)
-          }
-        }
-        else {
-          children.push(<td>{`To-Do ${i+1}`}</td>)
-        }
-      }
-      //Create the parent and add the children
-      table.push(<tr>{children}</tr>)
-    }
-    return table
-  }
 
   render() {
     const displayPosts = (
@@ -78,7 +27,7 @@ export default class Schedule extends Component {
         <TabPanel>
           {
             data.day_schedule.map( (schedule) =>
-              <div>
+              <div key={schedule.Time}>
                 <h1>{schedule.activity}</h1>
                 <p className="time">{schedule.Time}</p>
                 <p>{schedule.description}</p>
@@ -92,16 +41,13 @@ export default class Schedule extends Component {
         <TabPanel>
           {
             data.night_schedule.map( (schedule) =>
-              <div>
+              <div key={schedule.Time}>
                 <h1>{schedule.activity}</h1>
                 <p className="time">{schedule.Time}</p>
                 <p>{schedule.description}</p>
               </div>
             )
           }
-          {/*<table>
-            {this.createNightTable()}
-          </table>*/}
         </TabPanel>
       </Tabs>
     );

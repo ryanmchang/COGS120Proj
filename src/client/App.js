@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './screens/Home/Home.js';
 import ScheduleSetup1 from './screens/ScheduleSetup1/ScheduleSetup1.js';
 import ScheduleSetup2 from './screens/ScheduleSetup2/ScheduleSetup2.js';
+import ScheduleSetup3 from './screens/ScheduleSetup3/ScheduleSetup3.js';
 import Login from './screens/Login/Login.js';
 import Signup from './screens/Signup/Signup.js'
 import Schedule from './screens/Schedule/Schedule.js'
@@ -31,6 +32,7 @@ class App extends Component {
           <Route exact path='/home' component={Home} />
           <Route exact path='/schedule-setup1' component={ScheduleSetup1} />
           <Route exact path='/schedule-setup2' component={ScheduleSetup2} />
+          <Route exact path='/schedule-setup3' component={ScheduleSetup3} />
           <Route exact path='/Schedule' component={Schedule} />
         </Switch>
       </BrowserRouter>

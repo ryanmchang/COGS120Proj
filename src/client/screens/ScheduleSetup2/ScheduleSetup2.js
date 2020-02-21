@@ -35,8 +35,8 @@ export default class ScheduleSetup2 extends Component {
   routeBack = () => {
     this.props.history.goBack();
   }
-  routeSchedule = () => {
-    this.props.history.push('/schedule');
+  routeScheduleSetup = () => {
+    this.props.history.push('/schedule-setup3');
   }
 
 
@@ -77,11 +77,11 @@ export default class ScheduleSetup2 extends Component {
             <br/><br/>
           </div>
           What time do you normally wake up? <br/>
-          <input type="text"/> <br/>
+          <input type="time" required />
         </form>
       <img className="agreement" src={Agreement} />
 
-        <button className="nextStep" onClick={this.routeSchedule}>Finish</button>
+        <button className="nextStep" onClick={this.routeScheduleSetup}>Continue</button>
 
       </div>
     );
