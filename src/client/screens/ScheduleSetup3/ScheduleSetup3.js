@@ -45,16 +45,10 @@ export default class ScheduleSetup2 extends Component {
       <div className="setup2">
         <button className="back-button" onClick={this.routeBack}>Back</button>
 
-        <form>Just a few more questions... <br/><br/>
-          <small>Do you take melatonin?</small>
-          <input  type="radio" align="right"/>yes
-          <input type="radio" className="radio"/>no<br/>
-          <small>Do you use caffeine?</small>
-          <input  type="radio" className="radio"/>yes
-          <input type="radio" className="radio"/>no<br/>
-          <small>Do you use marijuana?</small>
-          <input  type="radio" className="radio"/>yes
-          <input type="radio" className="radio"/>no<br/>
+        <form>Just a few more questions... <br/>
+          <input  type="radio"/><small>Do you take melatonin?</small><br/>
+          <input  type="radio"/><small>Do you use caffeine?</small><br/>
+          <input  type="radio"/><small>Do you use marijuana?</small>
         </form>
         <form> Let us know if you have any sleep disorders <br/>
           <input type="text" placeholder="Enter text here"/>

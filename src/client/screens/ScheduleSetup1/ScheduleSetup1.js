@@ -3,6 +3,7 @@ import BackButton from "../../components/BackButton/BackButton.js";
 import Agreement from  "../../../../public/agreement.svg";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import TimezonePicker from 'react-timezone';
 
 export default class ScheduleSetup1 extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ export default class ScheduleSetup1 extends Component {
 
   handleFlightChange = e => {
     this.setState({
-      flightNum: e.target.value
+      flightNum: e.inputProps.timezone
     });
   };
 
@@ -47,12 +48,19 @@ export default class ScheduleSetup1 extends Component {
             selected={this.state.startDate}
             onChange={this.handleChange}
           />
-          <br/> What's your flight number? <br/>
-          <input name="flightNum" default="Enter your flight number"
-          value={this.state.flightNum} type="text" onChange={this.handleFlightChange}
-          placeholder="Enter Flight Number Here"/>
-
-        </form>
+          <br/> Select your destination's<br/>time zone <br/>
+          <TimezonePicker
+            value={this.state.flightNum}
+            onChange={timezone => {
+              console.log('New Timezone Selected:', timezone)
+              this.setState({flightNum:timezone})
+            }}
+            inputProps={{
+              placeholder: 'Select Timezone...',
+              name: 'timezone',
+            }}
+          />
+        </form><br/>
         <img className="agreement" src={Agreement} />
 
         <button className="nextStep" disabled={!this.state.flightNum}
