@@ -6,18 +6,33 @@ import BackButton from "../../components/BackButton/BackButton.js";
 
 
 export default class Signup extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      name: '',
+      username: '',
+      password: ''
+    };
+  }
    componentDidMount() {
   }
 
-  state = {
-    username: '',
-    password: ''
+  handleNameChange = e => {
+    this.state.name = e.target.value;
+    this.setState({
+      name: e.target.value
+    });
+    console.log('name: ', this.state.name);
+    data.user[0].name = this.state.name;
+    console.log('value: ', data.user[0].name);
   };
 
   handleUsernameChange = e => {
     this.setState({
       userName: e.target.value
     });
+
   };
 
   handlePassChange = e => {
@@ -27,12 +42,13 @@ export default class Signup extends Component {
   };
 
   routeHome = () => {
-    this.props.history.push('/home');
+    this.props.history.push('/home-new-acc');
   }
 
   routeBack = () => {
     this.props.history.goBack();
   }
+
 
 
   render() {
@@ -42,18 +58,24 @@ export default class Signup extends Component {
         <h1>Sign up for BodyClock</h1>
         <form>
           <div className="container">
-          <label for="username"><b>Set Username</b></label>
-           <input type="text" name="username" required
-           onChange={this.handleUsernameChange} placeholder="Username" />
+            <label htmlFor="name"><b>First Name</b></label>
+            <input type="text" name="name"
+            onChange={this.handleNameChange} placeholder="Full Name"
+            required />
 
-            <label for="username"><b>Set Password</b></label>
-           <input type="password" name="psw" required
+            <label htmlFor="username"><b>Username</b></label>
+            <input type="text" name="username" required
+           onChange={this.handleUsernameChange} placeholder="Username"
+           required />
+
+            <label htmlFor="pass"><b>Password</b></label>
+            <input type="password" name="psw" required
            onChange={this.handlePassChange} placeholder="Password" />
-
 
           </div>
         </form>
-      <button className="nextStep" disabled={(!this.state.userName) || (!this.state.password)}
+      <button className="nextStep"
+      disabled={(!this.state.name) || (!this.state.userName) || (!this.state.password)}
       onClick={this.routeHome}>Create Account</button>
     </div>
     );

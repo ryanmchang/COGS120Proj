@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 import data from "../../data.json";
 import BackButton from "../../components/BackButton/BackButton.js";
 import Flight from  "../../../../public/Flight.svg";
+import Signup from "../../screens/Signup/Signup.js";
 
-
-export default class Home extends Component {
+export default class HomeNewAcc extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -13,6 +13,7 @@ export default class Home extends Component {
       date: '',
     };
   }
+
   componentDidMount() {
     var date = new Date().getDate(); //Current Date
     var month = new Date().getMonth() + 1; //Current Month
@@ -38,7 +39,7 @@ export default class Home extends Component {
         <BackButton handleClick={this.routeBack}/>
         <div className= "welcome">
           <p>{this.state.date}</p>
-          <h1>Welcome back, <br/> {data.user[0].name}</h1>
+          <h1>Welcome {data.user[0].name}</h1>
         </div>
         <img className="flight" onClick={this.routeScheduleSetup} src={Flight} />
         <button className="addTrip" onClick={this.routeScheduleSetup}>Add a Trip</button>
