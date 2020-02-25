@@ -60,7 +60,8 @@ export default class Login extends Component {
           autoLoad={true}
           fields="name,email,picture"
           callback={this.responseFacebook}
-        /><br/>
+        />
+        <br/>
         </div>
       </div>
     );

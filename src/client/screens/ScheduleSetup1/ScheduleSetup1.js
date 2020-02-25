@@ -4,6 +4,7 @@ import Agreement from  "../../../../public/agreement.svg";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import TimezonePicker from 'react-timezone';
+import data from "../../data.json";
 
 export default class ScheduleSetup1 extends Component {
   constructor(props) {
@@ -60,6 +61,7 @@ export default class ScheduleSetup1 extends Component {
               name: 'timezone',
             }}
           />
+
         </form><br/>
         <img className="agreement" src={Agreement} />
 
