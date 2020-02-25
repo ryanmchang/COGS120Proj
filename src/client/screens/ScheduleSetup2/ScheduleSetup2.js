@@ -52,11 +52,11 @@ export default class ScheduleSetup2 extends Component {
         {
           this.state.showInfo
             ? (
-              <div className="info">
+              <div>
                 <p className="dropdown">A person's chronotype is the propensity for the individual
                 to sleep at a particular time during a 24-hour period. <br/><br/>
                 Don't know what your chronotype is?</p>
-                <a href="https://thepowerofwhenquiz.com/" id="info" >Check out your chronotype here</a>
+                <a href="https://thepowerofwhenquiz.com/" target="_blank" id="info" >Check out your chronotype here</a>
                 <br/><br/>
               </div>
             )

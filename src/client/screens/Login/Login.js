@@ -6,15 +6,21 @@ import Earth from "../../../../public/Earth.svg";
 import data from "../../data.json";
 
 export default class Login extends Component {
-  responseFacebook(response) {
-    console.log(response);
-  }
+
   componentDidMount() {
   }
 
   state = {
+    name: '',
     username: '',
     password: ''
+  };
+
+  responseFacebook(response) {
+    console.log(response);
+    this.setState({
+      name: ''
+    });
   };
 
   handleUsernameChange = e => {
@@ -50,7 +56,7 @@ export default class Login extends Component {
         onChange={this.handleUsernameChange} placeholder="Username"/></h4>
         <h4>Password<input className="textbox" type="password"
         onChange={this.handlePassChange} placeholder="Password"/></h4>
-        <a onClick={this.routeSignup} >First time user?</a><br/>
+        <h4><a onClick={this.routeSignup} >First time user?</a></h4>
         <button disabled={(!this.state.userName) || (!this.state.password)}
         onClick={this.routeHome}>LOGIN</button>
         <p>or</p>
