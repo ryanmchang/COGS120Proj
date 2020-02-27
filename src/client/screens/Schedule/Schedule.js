@@ -26,7 +26,7 @@ export default class Schedule extends Component {
 
         <TabPanel>
           {
-            data.day_schedule.map( (schedule) =>
+            data.day_schedules[4].map( (schedule) =>
               <div key={schedule.Time}>
                 <h1>{schedule.activity}</h1>
                 <p className="time">{schedule.Time}</p>
@@ -34,13 +34,10 @@ export default class Schedule extends Component {
               </div>
             )
           }
-          {/*<table>
-            {this.createMorningTable()}
-          </table>*/}
         </TabPanel>
         <TabPanel>
           {
-            data.night_schedule.map( (schedule) =>
+            data.night_schedules[4].map( (schedule) =>
               <div key={schedule.Time}>
                 <h1>{schedule.activity}</h1>
                 <p className="time">{schedule.Time}</p>
