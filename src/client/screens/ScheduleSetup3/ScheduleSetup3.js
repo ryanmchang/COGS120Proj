@@ -77,9 +77,15 @@ export default class ScheduleSetup2 extends Component {
             value="Marijuana"
             onChange={this.handleChange}
           />Marijuana
+          <input
+            type="radio"
+            name="drug"
+            value="None"
+            onChange={this.handleChange}
+          />None
         </form>
         <form> Let us know if you have any sleep disorders <br/>
-          <input type="text" placeholder="Enter text here"/>
+          <input type="text" placeholder="Skip me if you want"/>
         </form> <br/>
       <img className="agreement" src={Agreement} />
 
