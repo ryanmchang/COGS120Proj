@@ -22,14 +22,14 @@ app.post('/api/form/drug/:drug', function (req, res){
 });
 
 function writeChronotype(value) {
-  fs.readFile('./src/server/dummy.json', 'utf8', function readFileCallback(err, data){
+  fs.readFile('./src/client/tempData.json', 'utf8', function readFileCallback(err, data){
       if (err){
           console.log(err);
       } else {
       let obj = JSON.parse(data); //now it an object
       obj.form.chronotype = value; //add some data
       json = JSON.stringify(obj); //convert it back to json
-      fs.writeFile('./src/server/dummy.json', json, 'utf8', (err)=>{
+      fs.writeFile('./src/client/tempData.json', json, 'utf8', (err)=>{
         if (err) {
           return console.log(err);
         }
@@ -38,14 +38,14 @@ function writeChronotype(value) {
 }
 
 function writeDrug(value) {
-  fs.readFile('./src/server/dummy.json', 'utf8', function readFileCallback(err, data){
+  fs.readFile('./src/client/tempData.json', 'utf8', function readFileCallback(err, data){
       if (err){
           console.log(err);
       } else {
       let obj = JSON.parse(data); //now it an object
       obj.form.drug = value; //add some data
       json = JSON.stringify(obj); //convert it back to json
-      fs.writeFile('./src/server/dummy.json', json, 'utf8', (err)=>{
+      fs.writeFile('./src/client/tempData.json', json, 'utf8', (err)=>{
         if (err) {
           return console.log(err);
         }

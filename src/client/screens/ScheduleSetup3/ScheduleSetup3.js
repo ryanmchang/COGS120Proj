@@ -44,7 +44,6 @@ export default class ScheduleSetup2 extends Component {
     this.setState({
       drug: event.target.value
     });
-    console.log(event.target.value);
   }
 
   fetchTemplate = async (drug) => {
@@ -76,7 +75,7 @@ export default class ScheduleSetup2 extends Component {
             name="drug"
             value="Marijuana"
             onChange={this.handleChange}
-          />Marijuana
+          />Marijuana<br/>
           <input
             type="radio"
             name="drug"
