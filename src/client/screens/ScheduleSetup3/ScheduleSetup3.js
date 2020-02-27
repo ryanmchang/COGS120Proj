@@ -48,10 +48,11 @@ export default class ScheduleSetup2 extends Component {
         <form>Mark what drugs you use <br/>
           <input  type="radio"/>Melatonin<br/>
           <input  type="radio"/>Caffeine<br/>
-          <input  type="radio"/>Marijuana
+          <input  type="radio"/>Marijuana<br/>
+          <input  type="radio"/>Don't use any
         </form>
         <form> Let us know if you have any sleep disorders <br/>
-          <input type="text" placeholder="Enter text here"/>
+          <input type="text" placeholder="Skip me if you want"/>
         </form> <br/>
       <img className="agreement" src={Agreement} />
 

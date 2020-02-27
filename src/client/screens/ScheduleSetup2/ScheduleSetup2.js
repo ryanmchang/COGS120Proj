@@ -64,10 +64,12 @@ export default class ScheduleSetup2 extends Component {
               null
             )
         }
-          <input  type="radio" name="gender" /> Dolphin<br/>
-          <input type="radio" name="gender" /> Lion<br/>
-          <input type="radio" name="gender" /> Bear<br/>
-          <input type="radio" name="gender" /> Wolf<br/>
+        <div className="options">
+          <input  type="radio" name="gender" /> Dolphin, a light sleeper<br/>
+          <input type="radio" name="gender" /> Lion, a morning person<br/>
+          <input type="radio" name="gender" /> Bear, in between<br/>
+          <input type="radio" name="gender" /> Wolf, a night person <br/>
+        </div>
         </form>
 
         <form>
