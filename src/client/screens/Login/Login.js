@@ -42,14 +42,14 @@ export default class Login extends Component {
 
   handleBlurUser = e => {
     this.setState({
-      validateUser: e.target.value === 0
+      validateUser: this.state.password === 0
     });
     console.log(this.state.validateUser);
   }
 
   handleBlurPass = e => {
     this.setState({
-      validatePass: e.target.value === 0
+      validatePass: this.state.password === 0
     });
     console.log(this.state.validatePass);
   }
@@ -81,7 +81,7 @@ export default class Login extends Component {
           type="password" onBlur={this.handleBlurPass}
           onChange={this.handlePassChange} placeholder="Password"/></h4>
           <h4><a onClick={this.routeSignup} >First time user?</a></h4>
-          <button disabled={(!this.state.userName) || (!this.state.password)}
+          <button disabled={(!this.state.username) || (!this.state.password)}
           onClick={this.routeHome}>LOGIN</button>
           <p>or</p>
           <FacebookLogin
