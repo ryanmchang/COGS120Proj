@@ -37,8 +37,8 @@ export default class TimeCard extends Component {
             this.state.showInfo
               ? (
                 <div>
-                  <h2 className="dropdown">{this.props.activity}</h2>
-                  <p className="dropdown">{this.props.description}</p>
+                  <h2 align="center" className="dropdown">{this.props.activity}</h2>
+                  <p align="center" lassName="dropdown">{this.props.description}</p>
                   <br/><br/>
                 </div>
               )

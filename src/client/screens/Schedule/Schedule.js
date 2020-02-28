@@ -83,12 +83,13 @@ export default class Schedule extends Component {
     return (
       <div className="schedule">
         <BackButton handleClick={this.routeBack}/>
-        <button onClick={this.routeHome}>New Trip</button>
-        <h3> We are generating these tips based on your chronotype of {data.form.chronotype}</h3>
-        <h3> Drug used: {data.form.drug}</h3>
+         <button onClick={this.routeHome}>New Trip</button>
+
+        <h4 align="center"> Here are some tips based on your chronotype {data.form.chronotype} and drug usage</h4>
         {displayPosts}
 
       </div>
+
     );
   }
 }
