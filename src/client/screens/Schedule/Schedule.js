@@ -44,6 +44,9 @@ export default class Schedule extends Component {
   routeBack = () => {
     this.props.history.goBack();
   }
+  routeHome = () => {
+    this.props.history.push('/home');
+  }
 
   render() {
     const displayPosts = (
@@ -80,6 +83,7 @@ export default class Schedule extends Component {
     return (
       <div className="schedule">
         <BackButton handleClick={this.routeBack}/>
+        <button onClick={this.routeHome}>New Trip</button>
         <h3>These tips help you fight Jet Lag</h3>
         {displayPosts}
 
