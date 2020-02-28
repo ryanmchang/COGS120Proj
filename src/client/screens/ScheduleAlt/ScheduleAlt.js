@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import { Route, Link} from 'react-router-dom';
 import data from "../../tempData.json"; // <-------------------temp data!!!!!
 import BackButton from "../../components/BackButton/BackButton.js";
+import TimeCard from "../../components/TimeCard/TimeCard.js";
 import { render } from "react-dom";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -56,23 +57,26 @@ export default class ScheduleAlt extends Component {
         <TabPanel>
           {
             data.day_schedules[this.state.index].map( (schedule) =>
-              <div key={schedule.Time}>
-                <h1>{schedule.activity}</h1>
-                <p className="time">{schedule.Time}</p>
-                <p>{schedule.description}</p>
-              </div>
-              // <TimeCard time={schedule.Time} />
+              // <div key={schedule.Time}>
+              //   <h1>{schedule.activity}</h1>
+              //   <p className="time">{schedule.Time}</p>
+              //   <p>{schedule.description}</p>
+              // </div>
+              <TimeCard time={schedule.Time} activity={schedule.activity}
+              description={schedule.description} />
             )
           }
         </TabPanel>
         <TabPanel>
           {
             data.night_schedules[this.state.index].map( (schedule) =>
-              <div key={schedule.Time}>
-                <h1>{schedule.activity}</h1>
-                <p className="time">{schedule.Time}</p>
-                <p>{schedule.description}</p>
-              </div>
+              // <div key={schedule.Time}>
+              //   <h1>{schedule.activity}</h1>
+              //   <p className="time">{schedule.Time}</p>
+              //   <p>{schedule.description}</p>
+              // </div>
+              <TimeCard time={schedule.Time} activity={schedule.activity}
+              description={schedule.description} />
             )
           }
         </TabPanel>

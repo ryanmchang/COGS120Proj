@@ -91,7 +91,7 @@ export default class ScheduleSetup2 extends Component {
         </form> <br/>
       <img className="agreement" src={Agreement} />
 
-        <button className="nextStep" onClick={this.routeScheduleAlt}>Finish</button>
+        <button className="nextStep" onClick={this.routeSchedule}>Finish</button>
 
       </div>
     );

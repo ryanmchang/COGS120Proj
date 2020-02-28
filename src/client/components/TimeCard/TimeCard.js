@@ -31,9 +31,21 @@ export default class TimeCard extends Component {
   render() {
     return (
       <div className="timeCard">
-        <form>
-          <label onClick={this.showInfo}>{this.props.time}
-          </label>
+        <form className="container" onClick={this.showInfo}>
+          <h1 align="center"><a>{this.props.time}</a></h1>
+          {
+            this.state.showInfo
+              ? (
+                <div>
+                  <h2 className="dropdown">{this.props.activity}</h2>
+                  <p className="dropdown">{this.props.description}</p>
+                  <br/><br/>
+                </div>
+              )
+              : (
+                null
+              )
+          }
         </form>
       </div>
     );
