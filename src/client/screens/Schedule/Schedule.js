@@ -84,7 +84,8 @@ export default class Schedule extends Component {
       <div className="schedule">
         <BackButton handleClick={this.routeBack}/>
         <button onClick={this.routeHome}>New Trip</button>
-        <h3>These tips help you fight Jet Lag</h3>
+        <h3> We are generating these tips based on your chronotype of {data.form.chronotype}</h3>
+        <h3> Drug used: {data.form.drug}</h3>
         {displayPosts}
 
       </div>
