@@ -39,7 +39,10 @@ export default class ScheduleSetup2 extends Component {
     this.props.history.push('/schedule');
     this.fetchTemplate(this.state.drug);
   }
-
+  routeScheduleAlt = () => {
+    this.props.history.push('/schedule-alt');
+    this.fetchTemplate(this.state.drug);
+  }
   handleChange = (event) => {
     this.setState({
       drug: event.target.value
@@ -88,7 +91,7 @@ export default class ScheduleSetup2 extends Component {
         </form> <br/>
       <img className="agreement" src={Agreement} />
 
-        <button className="nextStep" onClick={this.routeSchedule}>Finish</button>
+        <button className="nextStep" onClick={this.routeScheduleAlt}>Finish</button>
 
       </div>
     );

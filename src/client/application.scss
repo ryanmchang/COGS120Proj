@@ -7,6 +7,7 @@ Need to add all styling (ex. component scss files) here
 @import "./screens/Home/home.scss";
 @import "./screens/HomeNewAcc/home-new-acc.scss";
 @import "./screens/Schedule/schedule.scss";
+@import "./screens/ScheduleAlt/schedule-alt.scss";
 @import "./screens/ScheduleSetup1/schedule-setup1.scss";
 @import "./screens/ScheduleSetup2/schedule-setup2.scss";
 @import "./screens/ScheduleSetup3/schedule-setup3.scss";
@@ -15,3 +16,4 @@ Need to add all styling (ex. component scss files) here
 
 @import "./components/BackButton/back-button.scss";
 @import "./components/Tab/tab.scss";
+@import "./components/TimeCard/time-card.scss";

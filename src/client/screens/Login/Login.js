@@ -52,22 +52,22 @@ export default class Login extends Component {
         <h1>Body Clock</h1>
         <img className="earth" src={Earth} />
         <div className="loginContent">
-        <h4>Username<input className="textbox" type="text"
-        onChange={this.handleUsernameChange} placeholder="Username"/></h4>
-        <h4>Password<input className="textbox" type="password"
-        onChange={this.handlePassChange} placeholder="Password"/></h4>
-        <h4><a onClick={this.routeSignup} >First time user?</a></h4>
-        <button disabled={(!this.state.userName) || (!this.state.password)}
-        onClick={this.routeHome}>LOGIN</button>
-        <p>or</p>
-        <FacebookLogin
-          className="facebookLogin"
-          appId="219745835855775"
-          autoLoad={true}
-          fields="name,email,picture"
-          callback={this.responseFacebook}
-        />
-        <br/>
+          <h4>Username<input required className="textbox" type="text"
+          onChange={this.handleUsernameChange} placeholder="Username"/></h4>
+          <h4>Password<input required className="textbox" type="password"
+          onChange={this.handlePassChange} placeholder="Password"/></h4>
+          <h4><a onClick={this.routeSignup} >First time user?</a></h4>
+          <button disabled={(!this.state.userName) || (!this.state.password)}
+          onClick={this.routeHome}>LOGIN</button>
+          <p>or</p>
+          <FacebookLogin
+            className="facebookLogin"
+            appId="219745835855775"
+            autoLoad={true}
+            fields="name,email,picture"
+            callback={this.responseFacebook}
+          />
+          <br/>
         </div>
       </div>
     );
