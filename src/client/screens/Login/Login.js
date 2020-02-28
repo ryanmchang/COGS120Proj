@@ -13,7 +13,8 @@ export default class Login extends Component {
   state = {
     name: '',
     username: '',
-    password: ''
+    password: '',
+    login: 'true'
   };
 
   responseFacebook(response) {
@@ -25,7 +26,7 @@ export default class Login extends Component {
 
   handleUsernameChange = e => {
     this.setState({
-      userName: e.target.value
+      username: e.target.value
     });
   };
 
@@ -52,12 +53,12 @@ export default class Login extends Component {
         <h1>Body Clock</h1>
         <img className="earth" src={Earth} />
         <div className="loginContent">
-          <h4>Username<input className="textbox" type="text"
-          onChange={this.handleUsernameChange} placeholder="Username"
-          style={{backgroundColor: (!this.state.userName) || (!this.state.password) ?
-              "red" : "white"}}/>
+          <h4>Username<input className={this.state.username.length === 0 ? "error" : "textbox"}
+           type="text"
+           onChange={this.handleUsernameChange} placeholder="Username" />
           </h4>
-          <h4>Password<input className="textbox" type="password"
+          <h4>Password<input className={this.state.password.length === 0 ? "error" : "textbox"}
+          type="password"
           onChange={this.handlePassChange} placeholder="Password"/></h4>
           <h4><a onClick={this.routeSignup} >First time user?</a></h4>
           <button disabled={(!this.state.userName) || (!this.state.password)}
