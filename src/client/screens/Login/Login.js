@@ -42,14 +42,15 @@ export default class Login extends Component {
 
   handleBlurUser = e => {
     this.setState({
-      validateUser: this.state.password === 0
+      validateUser: this.state.username.length > 0
     });
     console.log(this.state.validateUser);
+    console.log(this.state.username);
   }
 
   handleBlurPass = e => {
     this.setState({
-      validatePass: this.state.password === 0
+      validatePass: this.state.password.length > 0
     });
     console.log(this.state.validatePass);
   }
