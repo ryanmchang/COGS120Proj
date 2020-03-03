@@ -39,7 +39,7 @@ h1 {
     margin-bottom: 40px;
   }
 
-input[type=text], input[type=password] {
+.textbox {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -47,6 +47,16 @@ input[type=text], input[type=password] {
   border: 1px solid #ccc;
   box-sizing: border-box;
 }
+
+  .error {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid red;
+  }
+
 
  .container {
   padding:16px;

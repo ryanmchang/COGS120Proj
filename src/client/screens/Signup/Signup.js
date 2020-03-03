@@ -12,7 +12,10 @@ export default class Signup extends Component {
     this.state = {
       name: '',
       username: '',
-      password: ''
+      password: '',
+      validateName: true,
+      validateUser: true,
+      validatePass: true
     };
   }
    componentDidMount() {
@@ -29,6 +32,7 @@ export default class Signup extends Component {
   };
 
   handleUsernameChange = e => {
+    this.state.username = e.target.value;
     this.setState({
       userName: e.target.value
     });
@@ -36,10 +40,34 @@ export default class Signup extends Component {
   };
 
   handlePassChange = e => {
+    this.state.password = e.target.value;
     this.setState({
       password: e.target.value
     });
   };
+
+  handleBlurName = e => {
+    this.setState({
+      validateName: this.state.name.length > 0
+    });
+    console.log(this.state.validateName);
+    console.log(this.state.name);
+  }
+
+  handleBlurUser = e => {
+    this.setState({
+      validateUser: this.state.username.length > 0
+    });
+    console.log(this.state.validateUser);
+    console.log(this.state.username);
+  }
+
+  handleBlurPass = e => {
+    this.setState({
+      validatePass: this.state.password.length > 0
+    });
+    console.log(this.state.validatePass);
+  }
 
   routeHome = () => {
     this.props.history.push('/home-new-acc');
@@ -59,18 +87,19 @@ export default class Signup extends Component {
         <form>
           <div className="container">
             <label htmlFor="name"><b>First Name</b></label>
-            <input type="text" name="name"
-            onChange={this.handleNameChange} placeholder="Full Name"
-            required />
+            <input type="text" name="name" onBlur={this.handleBlurName}
+            className={this.state.validateName ? "textbox" : "error"}
+            onChange={this.handleNameChange} placeholder="Full Name" />
 
             <label htmlFor="username"><b>Username</b></label>
-            <input type="text" name="username" required
-           onChange={this.handleUsernameChange} placeholder="Username"
-           required />
+            <input type="text" name="username" onBlur={this.handleBlurUser}
+              className={this.state.validateUser ? "textbox" : "error"}
+              onChange={this.handleUsernameChange} placeholder="Username" />
 
             <label htmlFor="pass"><b>Password</b></label>
-            <input type="password" name="psw" required
-           onChange={this.handlePassChange} placeholder="Password" />
+            <input type="password" name="psw" onBlur={this.handleBlurPass}
+              className={this.state.validatePass ? "textbox" : "error"}
+              onChange={this.handlePassChange} placeholder="Password" />
 
           </div>
         </form>
