@@ -2,6 +2,8 @@
 const express = require('express');
 const os = require('os');
 const fs = require('fs');
+const path = require('path');
+
 
 const app = express();
 
@@ -12,8 +14,7 @@ app.use(express.static('dist'));
 app.get('/api/getUsername', (req, res) => res.send({ username: os.userInfo().username }));
 
 app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/index.html'));
-  console.log(path.join(__dirname + '/index.html'));
+  res.sendFile(path.join(__dirname + '/../../public/index.html'));
 })
 
 app.post('/api/form/chronotype/:chronotype', function (req, res){
@@ -58,4 +59,5 @@ function writeDrug(value) {
   }});
 }
 
+console.log(path.join(__dirname + '/../../public/index.html'));
 app.listen(process.env.PORT || 8080, () => console.log(`Listening on port ${process.env.PORT || 8080}!`));
