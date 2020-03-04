@@ -13,12 +13,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static('dist'));
 app.get('/api/getUsername', (req, res) => res.send({ username: os.userInfo().username }));
 
-app.use(app.router);
-app.use(express.static(path.join(__dirname, '/../../public')));
-
-// app.get('/*', (req, res) => {
-//   res.sendFile(path.join(__dirname + '/../../public/index.html'));
-// });
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname + '/../../public/index.html'));
+});
 
 app.post('/api/form/chronotype/:chronotype', function (req, res){
   let chronotype = req.params.chronotype;
