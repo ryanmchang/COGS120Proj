@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import FacebookLogin from 'react-facebook-login';
 import Earth from "../../../../public/Earth.svg";
-
 import data from "../../data.json";
+
 
 export default class Login extends Component {
 
@@ -19,10 +19,13 @@ export default class Login extends Component {
   };
 
   responseFacebook(response) {
+    this.state.name = response.name
     console.log(response);
     this.setState({
-      name: ''
+      name: response.name
     });
+    data.user[0].name = this.state.name;
+    console.log('value: ', data.user[0].name);
   };
 
   handleUsernameChange = e => {
@@ -91,6 +94,7 @@ export default class Login extends Component {
             autoLoad={true}
             fields="name,email,picture"
             callback={this.responseFacebook}
+            onClick={this.routeHome}
           />
           <br/>
         </div>

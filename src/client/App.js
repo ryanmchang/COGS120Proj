@@ -1,6 +1,7 @@
 // import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import ReactGA from 'react-ga';
 import Home from './screens/Home/Home.js';
 import HomeNewAcc from './screens/HomeNewAcc/HomeNewAcc.js';
 import ScheduleSetup1 from './screens/ScheduleSetup1/ScheduleSetup1.js';
@@ -11,6 +12,9 @@ import Signup from './screens/Signup/Signup.js';
 import Schedule from './screens/Schedule/Schedule.js';
 import ScheduleAlt from './screens/ScheduleAlt/ScheduleAlt.js';
 
+
+const trackingId = "UA-159187367-1";
+ReactGA.initialize(trackingId);
 
 const NewRoute = () => {
   return (

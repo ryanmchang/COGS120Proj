@@ -15,7 +15,8 @@ export default class ScheduleSetup1 extends Component {
 
   state = {
     startDate: new Date(),
-    flightNum: ''
+    flightNum: '',
+    validateField: true
   };
 
   handleChange = date => {
@@ -29,6 +30,13 @@ export default class ScheduleSetup1 extends Component {
       flightNum: e.inputProps.timezone
     });
   };
+
+  handleBlurField = e => {
+    this.setState({
+      validateField: this.state.flightNum.length > 0
+    });
+    console.log(this.state.validateField);
+  }
 
   routeScheduleSetup = () => {
     this.props.history.push('/schedule-setup2');
@@ -56,6 +64,7 @@ export default class ScheduleSetup1 extends Component {
               console.log('New Timezone Selected:', timezone)
               this.setState({flightNum:timezone})
             }}
+            className={this.state.validateField ? "" : "error"}
             inputProps={{
               placeholder: 'Select Timezone...',
               name: 'timezone',
@@ -66,7 +75,7 @@ export default class ScheduleSetup1 extends Component {
         <img className="agreement" src={Agreement} />
 
         <button className="nextStep" disabled={!this.state.flightNum}
-        onClick={this.routeScheduleSetup}>Continue</button>
+        onClick={this.state.validateField ? this.routeScheduleSetup : ''}>Continue</button>
       </div>
     );
   }
