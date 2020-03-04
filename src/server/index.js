@@ -12,7 +12,8 @@ app.use(express.static('dist'));
 app.get('/api/getUsername', (req, res) => res.send({ username: os.userInfo().username }));
 
 app.get('/*', (req, res) => {
-  res.sendFile('../../public/index.html');
+  res.sendFile(path.join(__dirname + '/index.html'));
+  console.log(path.join(__dirname + '/index.html'));
 })
 
 app.post('/api/form/chronotype/:chronotype', function (req, res){
