@@ -17,10 +17,6 @@ function initializeAnalytics() {
   const trackingId = "UA-159187367-1";
   ReactGA.initialize(trackingId);
   ReactGA.pageview('/');
-  ReactGA.event({
-    category: 'interactions',
-    action: 'click'
-  });
 
   const tagManagerArgs = {
       gtmId: 'GTM-TRJ4Q33'
@@ -40,6 +36,10 @@ const NewRoute = () => {
 class App extends Component {
 
   componentDidMount() {
+    ReactGA.event({
+      category: 'interactions',
+      action: 'click'
+    });
   }
 
   render() {
