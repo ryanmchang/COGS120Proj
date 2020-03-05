@@ -12,9 +12,11 @@ import Signup from './screens/Signup/Signup.js';
 import Schedule from './screens/Schedule/Schedule.js';
 import ScheduleAlt from './screens/ScheduleAlt/ScheduleAlt.js';
 
-
-const trackingId = "UA-159187367-1";
-ReactGA.initialize(trackingId);
+function initializeAnalytics() {
+  const trackingId = "UA-159187367-1";
+  ReactGA.initialize(trackingId);
+  ReactGA.pageview('/');
+}
 
 const NewRoute = () => {
   return (
@@ -30,6 +32,7 @@ class App extends Component {
   }
 
   render() {
+    initializeAnalytics();
     return (
       <BrowserRouter>
         <Switch>
