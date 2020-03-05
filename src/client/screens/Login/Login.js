@@ -65,8 +65,15 @@ export default class Login extends Component {
     data.user.push(obj);
   }
 
+  fetchName = async (chronotype) => {
+    let rawResponse = await fetch(this.state.name, {
+      method: "POST"
+    });
+  }
+
    routeHome = () => {
     this.props.history.push('/home');
+    this.fetchName(this.state.name);
   }
 
 
