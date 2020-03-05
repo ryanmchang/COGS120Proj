@@ -17,15 +17,14 @@ function initializeAnalytics() {
   const trackingId = "UA-159187367-1";
   ReactGA.initialize(trackingId);
   ReactGA.pageview('/');
-
-  const tagManagerArgs = {
-      gtmId: 'GTM-TRJ4Q33'
-  };
-
   ReactGA.event({
     category: 'interactions',
     action: 'click'
   });
+
+  const tagManagerArgs = {
+      gtmId: 'GTM-TRJ4Q33'
+  };
 
   TagManager.initialize(tagManagerArgs)
 }
