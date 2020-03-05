@@ -31,7 +31,7 @@ export default class TimeCard extends Component {
   render() {
     return (
       <div className="timeCard">
-        <form className="container" onClick={this.showInfo}>
+        <form className="wrap" onClick={this.showInfo}>
           <h1 align="center"><a>{this.props.time}</a></h1>
           {
             this.state.showInfo

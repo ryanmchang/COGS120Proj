@@ -45,6 +45,9 @@ export default class ScheduleAlt extends Component {
   routeBack = () => {
     this.props.history.goBack();
   }
+   routeHome = () => {
+    this.props.history.push('/home');
+  }
 
   render() {
     const displayPosts = (
@@ -84,8 +87,9 @@ export default class ScheduleAlt extends Component {
     );
     return (
       <div className="schedule">
-        <BackButton handleClick={this.routeBack}/>
-        <h3>These tips help you fight Jet Lag</h3>
+        <BackButton handleClick={this.routeBack}/> <br/>
+        <button align="center"onClick={this.routeHome}>Create New</button>
+           <h4 align="lefts"> Here are some tips based on your chronotype {data.form.chronotype} and drug usage</h4>
         {displayPosts}
 
       </div>

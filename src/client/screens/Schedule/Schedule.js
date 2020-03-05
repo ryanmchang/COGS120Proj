@@ -67,6 +67,7 @@ export default class Schedule extends Component {
             )
           }
         </TabPanel>
+
         <TabPanel>
           {
             data.night_schedules[this.state.index].map( (schedule) =>
@@ -78,17 +79,18 @@ export default class Schedule extends Component {
             )
           }
         </TabPanel>
+           <button onClick={this.routeHome}>Ready for a new trip?</button>
       </Tabs>
     );
     return (
       <div className="schedule">
         <BackButton handleClick={this.routeBack}/>
-         <button onClick={this.routeHome}>New Trip</button>
 
-        <h4 align="center"> Here are some tips based on your chronotype {data.form.chronotype} and drug usage</h4>
+        <h4 align="lefts"> Here are some tips based on your chronotype {data.form.chronotype} and drug usage</h4>
         {displayPosts}
 
       </div>
+
 
     );
   }

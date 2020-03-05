@@ -93,7 +93,7 @@ export default class Login extends Component {
           onChange={this.handlePassChange} placeholder="Password"/></h4>
           <h4><a onClick={this.routeSignup} >First time user?</a></h4>
           <button disabled={(!this.state.username) || (!this.state.password)}
-          onClick={this.routeHome}>LOGIN</button>
+          onClick={this.routeHome}>Login</button>
           <p>or</p>
           <FacebookLogin
             className="facebookLogin"

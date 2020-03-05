@@ -2,13 +2,12 @@
 //This impoart let's us use variables that we want for global use
 @import '../../utilities/variables.scss';
 
-.container {
+.wrap {
  padding: 10px;
  background-color: #F2C94C;
  border-radius: 10px;
+  box-shadow: 0rem 0 1rem white;
  margin-top: 35px;
- border-color: white;
- border-width: thick;
 }
 
 .timeCard {
@@ -16,7 +15,8 @@
   color: #333333;
 }
 h2 {
-  text-decoration: underline;
+  color: white;
+  font-weight: 300;
 }
 p{
   color: #333333;

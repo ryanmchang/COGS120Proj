@@ -18,7 +18,7 @@ export default class BackButton extends Component {
 
   render() {
     return (
-      <button className="back-button" onClick={this.props.handleClick}> Back </button>
+      <button className="btn draw-border" onClick={this.props.handleClick}> Back </button>
     );
   }
 }

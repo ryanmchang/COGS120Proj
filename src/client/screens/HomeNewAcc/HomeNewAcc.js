@@ -15,13 +15,23 @@ export default class HomeNewAcc extends Component {
   }
 
   componentDidMount() {
+    //diy
+    const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
+
     var date = new Date().getDate(); //Current Date
-    var month = new Date().getMonth() + 1; //Current Month
+    // var month = new Date().getMonth() + 1; //Current Month
     var year = new Date().getFullYear(); //Current Year
+
+
+  const d = new Date();
+  var m =  monthNames[d.getMonth()]
+
 
     this.setState ({
       date:
-        month + '/' + date + '/' + year,
+         m + ' ' + date + ' ' + year,
     });
   }
 
