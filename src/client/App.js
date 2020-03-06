@@ -16,7 +16,7 @@ import TagManager from 'react-gtm-module';
 function initializeAnalytics() {
   const trackingId = "UA-159187367-1";
   ReactGA.initialize(trackingId);
-  ReactGA.pageview('/');
+  ReactGA.pageview(window.location.pathname + window.location.search);
 
   const tagManagerArgs = {
       gtmId: 'GTM-TRJ4Q33'
