@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import { Route, Link} from 'react-router-dom';
-import data from "../../tempData.json"; // <-------------------temp data!!!!!
+import data from "../../data.json"; // <-------------------temp data!!!!!
 import BackButton from "../../components/BackButton/BackButton.js";
 import TimeCard from "../../components/TimeCard/TimeCard.js";
 import { render } from "react-dom";
@@ -52,7 +52,7 @@ export default class ScheduleAlt extends Component {
       category: 'button in alt',
       action: 'click on create'
     });
-    // alert("send")
+    alert("send")
   }
 
   render() {

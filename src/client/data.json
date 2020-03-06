@@ -16,102 +16,102 @@
       {
         "activity": "Wake Up",
         "Time": "Before 10",
-        "description": "quiet me time before emails and phone calls and the general demands of the day begin."
+        "description": "Get some quiet alone time before answering emails, phone calls, and the general demands of the day begin."
       },
       {
         "activity": "Avoid Light",
         "Time": "8:00 - 13:00",
-        "description": "Minimize light exposure as much as possible."
+        "description": "Minimize light your exposure as much as possible."
       },
        {
         "activity": "Use caffeine",
         "Time": "8:00 - 16:00",
-        "description": "Use caffaine little and often."
+        "description": "Drink the equivalent of a cup of coffee to extend your day-time drive."
       }
     ],
     [
       {
         "activity": "Wake Up",
         "Time": "Before 10",
-        "description": "quiet me time before emails and phone calls and the general demands of the day begin."
+        "description": "Take some time to relax and plan out your day. Now would be a good time to drink something caffeinated!"
       },
       {
-        "activity": "Avoid Light",
+        "activity": "Take a break from your devices",
         "Time": "8:00 - 13:00",
-        "description": "Minimize light exposure as much as possible."
+        "description": "Get away from your devices and try letting in natural light."
       },
        {
         "activity": "Shower and fuel Up",
         "Time": "After 14:00",
-        "description": "If you feel sleepy, take a shower to fresh up."
+        "description": "If you feel sleepy, take a shower to freshen up!"
       }
     ],
     [
       {
         "activity": "Wake Up",
-        "Time": "Before 10",
-        "description": "quiet me time before emails and phone calls and the general demands of the day begin."
+        "Time": "Before 9",
+        "description": "Eat a hearty breakfast and make sure to hydrate."
       },
       {
-         "activity": "Avoid Light",
+         "activity": "Get work done",
          "Time": "8:00 - 13:00",
-         "description": "Minimize light exposure as much as possible."
+         "description": "Now would be a good time to focus on whatever work you have planned."
       },
       {
          "activity": "Shower and fuel Up",
          "Time": "After 14:00",
-         "description": "If you feel sleepy, take a shower to fresh up."
+         "description": "If you feel sleepy, take a shower to freshen up."
       }
     ],
     [
       {
           "activity": "Wake Up",
           "Time": "Around 8",
-          "description": "quiet me time before emails and phone calls and the general demands of the day begin."
+          "description": "Begin your day with a small, but hearty meal. Get going to the gym after, making sure to refuel with protein!"
         },
         {
-          "activity": "Avoid Light",
+          "activity": "Be Active",
           "Time": "8:00 - 13:00",
-          "description": "Minimize light exposure as much as possible."
+          "description": "As you go about your day, remember to stay focused on what you need to do. Try not to relax until later in the day."
         },
          {
           "activity": "Use caffeine",
           "Time": "8:00 - 16:00",
-          "description": "Use caffaine little and often."
+          "description": "Drink green tea."
         }
     ],
     [
       {
           "activity": "Wake Up",
           "Time": "Around 8",
-          "description": "quiet me time before emails and phone calls and the general demands of the day begin."
+          "description": "Let in light and do something that activates your brain. Could be reading the paper or playing virtual chess!"
         },
         {
-          "activity": "Avoid Light",
+          "activity": "Increase light exposure",
           "Time": "8:00 - 13:00",
-          "description": "Minimize light exposure as much as possible."
+          "description": "Spend time outdoors and try to increase exposure to natural light."
         },
          {
-          "activity": "Shower and fuel Up",
+          "activity": "Eat a big meal",
           "Time": "After 14:00",
-          "description": "If you feel sleepy, take a shower to fresh up."
+          "description": "It's important to eat a big meal now to help your body feel recharged and to further increase your sleep drive."
         }
     ],
     [
       {
           "activity": "Wake Up",
           "Time": "Around 8",
-          "description": "quiet me time before emails and phone calls and the general demands of the day begin."
+          "description": "Instead of driving to work, try biking or walking."
         },
         {
-          "activity": "Avoid Light",
+          "activity": "Stay active",
           "Time": "8:00 - 13:00",
-          "description": "Minimize light exposure as much as possible."
+          "description": "Don't take shortcuts! Go on brisk walks and interact with peers to lessen your sleep drive."
         },
          {
           "activity": "Shower and fuel Up",
           "Time": "After 14:00",
-          "description": "If you feel sleepy, take a shower to fresh up."
+          "description": "Take a brief nap if you need, but no more than 20 minutes. Now would be a good time to shower and eat a snack!"
         }
     ]
   ],
@@ -214,7 +214,7 @@
        {
          "activity": "See some light",
          "Time": "20:00 - 22:00",
-         "description": "Get whatever light exposure you can-avoid darkness."
+         "description": "Get whatever light exposure you can. Avoid darkness!"
        },
         {
          "activity": "Get melatonin",

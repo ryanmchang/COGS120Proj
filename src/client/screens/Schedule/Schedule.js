@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 //import { Route, Link} from 'react-router-dom';
-import data from "../../tempData.json"; // <-------------------temp data!!!!!
+import data from "../../data.json"; // <-------------------temp data!!!!!
 import BackButton from "../../components/BackButton/BackButton.js";
 import { render } from "react-dom";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
