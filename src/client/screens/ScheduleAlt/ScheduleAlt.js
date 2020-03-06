@@ -47,6 +47,11 @@ export default class ScheduleAlt extends Component {
   }
    routeHome = () => {
     this.props.history.push('/home');
+    ReactGA.event({
+        category:'button'
+        action: 'send information'
+    })
+    alert('send information when clicked on create new')
   }
 
   render() {
