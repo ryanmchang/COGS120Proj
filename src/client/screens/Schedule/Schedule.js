@@ -51,8 +51,18 @@ export default class Schedule extends Component {
       category: 'button in original',
       action: 'click on create'
     });
-    alert("send")
+    // alert("send")
   }
+
+  showInfo(event) {
+    event.preventDefault();
+      ReactGA.event({
+      category: 'tab',
+      action: 'click on create'
+    });
+    // alert("tab")
+  }
+
 
   render() {
     const displayPosts = (
@@ -62,7 +72,7 @@ export default class Schedule extends Component {
           <Tab>Night</Tab>
         </TabList>
 
-        <TabPanel>
+        <TabPanel onClick={this.showInfo}>
           {
             data.day_schedules[this.state.index].map( (schedule) =>
               <div key={schedule.Time}>

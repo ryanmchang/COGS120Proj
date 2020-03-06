@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import data from "../../data.json";
+import ReactGA from 'react-ga';
 
 export default class TimeCard extends Component {
 
@@ -27,6 +28,12 @@ export default class TimeCard extends Component {
         showInfo: true
       });
     }
+
+      ReactGA.event({
+      category: 'toggle',
+      action: 'click on create'
+    });
+    // alert("toggle")
   }
   render() {
     return (

@@ -52,7 +52,7 @@ export default class ScheduleAlt extends Component {
       category: 'button in alt',
       action: 'click on create'
     });
-    alert("send")
+    // alert("send")
   }
 
   render() {
