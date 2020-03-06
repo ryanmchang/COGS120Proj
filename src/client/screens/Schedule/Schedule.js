@@ -5,6 +5,7 @@ import BackButton from "../../components/BackButton/BackButton.js";
 import { render } from "react-dom";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import ReactGA from 'react-ga';
 
 
 export default class Schedule extends Component {
@@ -44,8 +45,13 @@ export default class Schedule extends Component {
   routeBack = () => {
     this.props.history.goBack();
   }
-  routeHome = () => {
+    routeHome = () => {
     this.props.history.push('/home');
+    ReactGA.event({
+      category: 'button in original',
+      action: 'click on create'
+    });
+    alert("send")
   }
 
   render() {
