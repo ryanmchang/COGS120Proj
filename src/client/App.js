@@ -36,6 +36,7 @@ const NewRoute = () => {
 class App extends Component {
 
   componentDidMount() {
+    initializeAnalytics();
     ReactGA.event({
       category: 'interactions',
       action: 'click'
@@ -43,7 +44,6 @@ class App extends Component {
   }
 
   render() {
-    initializeAnalytics();
     return (
       <BrowserRouter>
         <Switch>
