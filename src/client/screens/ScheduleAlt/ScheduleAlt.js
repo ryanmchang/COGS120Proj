@@ -95,7 +95,7 @@ export default class ScheduleAlt extends Component {
       <div className="schedule">
         <BackButton handleClick={this.routeBack}/> <br/>
         <button align="center"onClick={this.routeHome}>Create New</button>
-           <h4 align="lefts"> Here are some tips based on your chronotype {data.form.chronotype} and drug usage</h4>
+           <h4 align="center"> Here is today's personalized routine based on your chronotype {data.form.chronotype} and preferences</h4>
         {displayPosts}
 
       </div>
