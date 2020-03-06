@@ -57,8 +57,8 @@ export default class Schedule extends Component {
   showInfo(event) {
     event.preventDefault();
       ReactGA.event({
-      category: 'tab',
-      action: 'click on create'
+      category: 'tab in original',
+      action: 'how many times people tab on each activity'
     });
     // alert("tab")
   }

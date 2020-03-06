@@ -30,8 +30,8 @@ export default class TimeCard extends Component {
     }
 
       ReactGA.event({
-      category: 'toggle',
-      action: 'click on create'
+      category: 'toggle in alt',
+      action: 'how many times people click on each card'
     });
     // alert("toggle")
   }
