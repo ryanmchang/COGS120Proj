@@ -6,6 +6,7 @@ import TimeCard from "../../components/TimeCard/TimeCard.js";
 import { render } from "react-dom";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import ReactGA from 'react-ga';
 
 
 export default class ScheduleAlt extends Component {
