@@ -88,14 +88,16 @@ export default class ScheduleAlt extends Component {
               description={schedule.description} />
             )
           }
-        </TabPanel>
+        </TabPanel><br/><br/>
+        <div align="center">
+          <button onClick={this.routeHome}>Ready for a new trip?</button>
+        </div>
       </Tabs>
     );
     return (
       <div className="schedule">
         <BackButton handleClick={this.routeBack}/> <br/>
-        <button align="center"onClick={this.routeHome}>Create New</button>
-           <h4 align="center"> Here is today's personalized routine based on your chronotype {data.form.chronotype} and preferences</h4>
+           <h4 align="center"> Today's personalized routine based on your chronotype {data.form.chronotype} and preferences</h4>
         {displayPosts}
 
       </div>
