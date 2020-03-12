@@ -88,8 +88,8 @@ export default class ScheduleAlt extends Component {
               description={schedule.description} />
             )
           }
-        </TabPanel><br/><br/>
-        <div align="center">
+        </TabPanel>
+        <div className="newTrip" align="center">
           <button onClick={this.routeHome}>Ready for a new trip?</button>
         </div>
       </Tabs>
